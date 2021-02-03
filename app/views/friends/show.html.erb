@@ -1,5 +1,48 @@
 <p id="notice"><%= notice %></p>
 
+
+<table class="table"> 
+  <thead>
+    <tr>
+      <th scope="col">Nª</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Instagram</th>
+      <th scope="col">Country</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td> <%= @friend.first_name %> </td>
+      <td> <%= @friend.last_name %> </td>
+      <td> <%= @friend.email %> </td>
+      <td> <%= @friend.phone %> </td>
+      <td> <%= @friend.instagram %> </td>
+      <td> <%= @friend.country %>  </td>
+
+    </tr>
+ 
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-secondary" %> |
+<%= link_to 'Back', friends_path, class: "btn btn-secondary" %>
+
+<br/> 
+
+<br/> 
+
+
+<h2>Another way to display this by CRUD default: </h2>
+
+
+<br/> 
+
+
 <p>
   <strong>First name:</strong>
   <%= @friend.first_name %>
@@ -29,6 +72,3 @@
   <strong>Country:</strong>
   <%= @friend.country %>
 </p>
-
-<%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-secondary" %> |
-<%= link_to 'Back', friends_path, class: "btn btn-secondary" %>
